@@ -1,0 +1,153 @@
+.grid-list{
+  padding: 2rem;
+
+  @media screen and (max-width: 878px) {
+    .ant-col-lg-6 {
+      width: 50%;
+    }
+  }
+
+  .item-card{
+    //padding: 2rem;
+    margin: 1rem;
+    //width: 100%;
+    position: relative;
+    @include flexbox(0 0 auto, column, flex-start, flex-start);
+    color: rgb(34, 25, 36);
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    height: 95%;
+
+    .card-header{
+      width: 100%;
+
+      img{
+        background: white;
+        position: relative;
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+      }
+    }
+
+    .item-body{
+      padding: 0.5rem 1rem ;
+      @include flexbox(0 0 auto, column, flex-start, flex-start);
+      gap: 1.25rem;
+
+      .branding-img{
+        img{
+          @include flexbox(0 0 auto, row, flex-start, flex-start);
+          position: relative;
+          width: 6rem;
+        }
+      }
+
+      .title-wrapper{
+        width: 100%;
+        margin-top: 1rem;
+        //@include flexbox(0 0 auto, row, flex-start, flex-start);
+
+        .title{
+          //@include flexbox(1 1 auto, column, flex-start, flex-start);
+          font-weight: 400;
+          font-size: 1rem;
+          line-height: 1.2;
+          width: 100%;
+          margin-bottom: 0rem;
+
+          //position: relative;
+        }
+
+        .wishlist{
+          @include flexbox(0 0 auto, column, flex-start, flex-end);
+          //width: 80%;
+          //position: relative;
+          svg{
+            width: 2rem;
+            color: #0a850a;
+          }
+
+        }
+      }
+
+      .price-wrapper{
+        @include flexbox(0 0 auto, row, flex-start, flex-start);
+
+        .price{
+          color: rgb(207, 0, 16);
+          font-size: 2.125rem;
+          //line-height: 1.4;
+          font-weight: 700;
+          //font-family: "Filson Soft", sans-serif;
+          margin-right: 0.3125rem;
+          margin-bottom: 0rem;
+        }
+
+      }
+
+      .in-stock{
+        @include flexbox(0 0 auto, row, flex-start, center);
+
+        p{
+          color: rgb(34, 25, 36);
+          font-weight: 500;
+          font-size: 1rem;
+          text-align: center;
+          margin-left: 0.5rem;
+          margin-bottom: 0rem;
+          @include flexbox(0 0 auto, row, flex-start, center);
+        }
+
+      }
+
+      .review-wrapper{
+        @include flexbox(0 0 auto, row, flex-start, center);
+
+        p{
+          margin-bottom: 0rem;
+          margin-left: 0.75rem;
+        }
+      }
+    }
+
+  }
+
+  .load-more{
+    margin-top: 1.25rem;
+    width: 100%;
+    @include flexbox(0 0 auto, column, flex-start, center);
+    gap: 1rem;
+
+    p{
+      color: #6f6f6f;
+      font-weight: 500;
+      font-size: 1.25rem;
+      margin-bottom: 0rem;
+    }
+
+    Button{
+      @include flexbox(0 0 auto, row, center, center);
+      border-radius: 0.1875rem;
+      font-size: 1rem;
+      opacity: 1;
+      padding: 1.5rem 2rem;
+      position: relative;
+      text-align: center;
+      text-shadow: none;
+      text-transform: uppercase;
+      transition: background-color 0.4s ease 0s, border-color 0.4s ease 0s, box-shadow 0.4s ease 0s;
+      white-space: nowrap;
+      background-color: rgb(111, 111, 111);
+      border: 1px solid rgb(111, 111, 111);
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+      font-weight: 700;
+
+      &:hover{
+        background-color: rgb(34, 25, 36);
+        border: 1px solid rgb(111, 111, 111);
+      }
+    }
+
+  }
+}
